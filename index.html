@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AVer Việt Nam - Thiết bị hội nghị truyền hình chuyên nghiệp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="icon" href="./assets/images/favicon.png" sizes="16x16" type="image/png" />
+    <script type="text/javascript">
+        function writeCookie(name, value, days) {
+            var date, expires;
+            if (days) {
+                date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var i,
+                c,
+                ca,
+                nameEQ = name + "=";
+            ca = document.cookie.split(";");
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ?
+                "" :
+                decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        var utm_campaign = getParameterByName("utm_campaign");
+        var utm_term = getParameterByName("utm_term");
+        var utm_content = getParameterByName("utm_content");
+
+        if (utm_source != "") {
+            writeCookie("utm_source", utm_source, 30);
+            writeCookie("utm_medium", utm_medium, 30);
+            writeCookie("utm_campaign", utm_campaign, 30);
+            writeCookie("utm_term", utm_term, 30);
+            writeCookie("utm_content", utm_content, 30);
+        }
+    </script>
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+    <div class="btn_top">
+        <figure>
+            <img src="./assets/images/btn_top.png" alt="" class="img-fluid">
+        </figure>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <figure>
+                    <img src="./assets/images/logo.png" alt="" class="img-fluid mx-auto" />
+                </figure>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto mr-0">
+                    <li class="nav-item page-scroll">
+                        <a class="nav-link active" href="#header">
+                            <p>
+                                Trang chủ
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item page-scroll">
+                        <a class="nav-link" href="#gioithieu">
+                            <p>
+                                Giới thiệu
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item page-scroll">
+                        <a class="nav-link" href="#sanpham">
+                            <p>
+                                Sản phẩm
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item page-scroll">
+                        <a class="nav-link" href="#tinhnang">
+                            <p>
+                                Tính năng nổi bật
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item page-scroll">
+                        <a class="nav-link" href="#giaithuong">
+                            <p>
+                                Giải thưởng
+                            </p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xl-8 my-auto">
+                    <p class="try_buy">
+                        TRY & BUY
+                    </p>
+                    <p class="free_trial">
+                        Miễn phí dùng thử để tìm đúng thiết bị hôi nghị truyền hình bạn cần
+                    </p>
+                    <div class="free_trial_btn">
+                        Miễn phí dùng thử
+                    </div>
+                </div>
+                <div class="col-lg-4 col-xl-4">
+                    <div class="form_header">
+                        <p>
+                            Đăng ký để được tư vấn
+                        </p>
+                        <p>
+                            Và nhận ngay ưu đãi <br />
+                            miễn phí dùng thử sản phẩm!
+                        </p>
+                        <form>
+                            <input type="text" id="fullname" class="field_input" placeholder="Họ và tên">
+                            <input type="tel" id="phone" class="field_input" placeholder="Số điện thoại">
+                            <input type="email" id="email" class="field_input" placeholder="Email">
+                            <input type="text" id="company" class="field_input" placeholder="Tên công ty">
+                            <button type="button" onclick="kiemtra()" class="field_register">ĐĂNG KÝ NGAY</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gioithieu">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <figure>
+                        <img src="./assets/images/sec2_hinh1.jpg" alt="" class="img-fluid d-block">
+                    </figure>
+                    <p>
+                        Giao tiếp mặt đối mặt
+                    </p>
+                    <p>
+                        Trải nghiệm cuộc họp từ xa tự nhiên như giao tiếp mặt đối mặt với thiết bị hội nghị truyền hình AVer.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="./assets/images/sec2_hinh2.jpg" alt="" class="img-fluid d-block">
+                    </figure>
+                    <p>
+                        Tiết kiệm thời gian đi lại
+                    </p>
+                    <p>
+                        Sử dụng thiết bị hội nghị truyền hình AVer, bạn có thể kết nối với mọi người mọi lúc mọi nơi mà không cần đi công tác, tiết kiệm thời gian và chi phí đi lại.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <figure>
+                        <img src="./assets/images/sec2_hinh3.jpg" alt="" class="img-fluid d-block">
+                    </figure>
+                    <p>
+                        Sản phẩm & Dịch vụ đẳng cấp quốc tế
+                    </p>
+                    <p>
+                        Dịch vụ bảo hành 3 năm dẫn đầu ngành cùng với chi phí đầu tư phù hợp với mọi ngân sách của doanh nghiệp.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="giaiphap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+                                Giải pháp hội nghị truyền hình <span class="break"></span>
+                                trên nền tảng đám mây
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+                                Giải pháp hội nghị truyền hình <span class="break"></span>
+                                qua IP
+                            </a>
+                        </li>
+                    </ul>
+                    <p>
+                        Một hệ sinh thái cho mọi không gian phòng họp
+                    </p>
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            <div class="swiper-container" id="cloud_flatform">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/cam530" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model1.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/cam520pro" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model2.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/vc520pro" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model3.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/vc520-plus" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model4.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/vb342plus" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model5.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/cam340plus" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap1_model6.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next cloud_next"></div>
+                                <div class="swiper-button-prev cloud_prev"></div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="swiper-container" id="ip_flatform">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href=" https://vn.communication.aver.com/model/evc130" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap2_model1.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/evc350" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap2_model2.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/evc170" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap2_model3.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/svc500" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap2_model4.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="https://vn.communication.aver.com/model/evc150" target="_blank" rel="noopener noreferrer">
+                                            <figure>
+                                                <img src="./assets/images/giaiphap2_model5.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                            </figure>
+                                        </a>
+                                    </div>
+                                </div>
+                                <!-- Add Arrows -->
+                                <div class="swiper-button-next ip_next"></div>
+                                <div class="swiper-button-prev ip_prev"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tinhnang">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang1.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Kết nối đa giao thức Omni-Protocol
+                        </p>
+                        <p>
+                            Trải nghiệm cuộc họp từ xa tự nhiên như giao tiếp mặt đối mặt với thiết bị hội nghị truyền hình AVer.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang2.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Phần mềm bổ trợ EZ miễn phí
+                        </p>
+                        <p>
+                            Sử dụng thiết bị hội nghị truyền hình AVer, bạn có thể kết nối với mọi người mọi lúc mọi nơi mà không cần đi công tác, tiết kiệm thời gian và chi phí đi lại.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang3.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Tương thích với tất cả các nền tảng phần mềm trên nền tảng đám mây
+                        </p>
+                        <p>
+                            Dịch vụ bảo hành 3 năm dẫn đầu ngành cùng với chi phí đầu tư phù hợp với mọi ngân sách của doanh nghiệp.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang4.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Camera PTZ dễ dàng thiết lập qua cổng USB
+                        </p>
+                        <p>
+                            Trải nghiệm cuộc họp từ xa tự nhiên như giao tiếp mặt đối mặt với thiết bị hội nghị truyền hình AVer.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang5.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Bảo hành 3 năm dẫn đầu ngành
+                        </p>
+                        <p>
+                            AVer bảo hành 3 năm hàng đầu của ngành. Chúng tôi luôn cố gắng cung cấp sản phẩm và dịch vụ hỗ trợ hàng đầu trong ngành, đảm bảo sự đầu tư và an tâm khi sử dụng.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="tinhnang">
+                        <figure>
+                            <img src="./assets/images/tinhnang6.jpg" alt="" class="img-fluid d-block">
+                        </figure>
+                        <p>
+                            Made in Taiwan (MIT)
+                        </p>
+                        <p>
+                            Hệ thống hội nghị truyền hình AVer được sản xuất tại Đài Loan từ thiết kế, nghiên cứu và phát triển đến sản xuất, với chất lượng thuần túy và đáng tin cậy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="giaiphapdaotao">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-4 offset-lg-2">
+                    <div class="content">
+                        <p>
+                            Bạn đang tìm Giải pháp Đào Tạo Từ Xa
+                            của AVer dành cho giáo dục?
+                        </p>
+                        <p>
+                            AVer cung cấp một số giải pháp đào tạo từ xa để nâng cao trải nghiệm thực sự cho các doanh nghiệp và tổ chức giáo dục. AVer giúp bạn nhanh chóng kết nối và cộng tác với tất cả mọi người một cách dễ dàng. <br />
+                            Hãy nâng tầm giáo dục thêm một bước nữa với các giải pháp công nghệ của AVer!
+                        </p>
+                        <div class="btn_timhieuthem">
+                            <a href="https://vn.aver.com/solution/classroom-technology" target="_blank" rel="noopener noreferrer">
+                                Tìm hiểu thêm
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pad0">
+                    <iframe src="https://www.youtube.com/embed/nggzBmL__q0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="giaithuong">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 pad0">
+                    <div class="swiper-container" id="reward_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="./assets/images/giaithuong1.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                </figure>
+                            </div>
+                            <div class="swiper-slide">
+                                <figure>
+                                    <img src="./assets/images/giaithuong2.jpg" alt="" class="img-fluid d-block mx-auto" />
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next reward_next"></div>
+                        <div class="swiper-button-prev reward_prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="video">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 pad0">
+                    <div class="swiper-container" id="video_slider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/C7zIYyXkPBY?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/n08BU190Frg?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/TjjKD8ZZgvE?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/G4CdUVq6otU?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/JY6LD0qeD5o?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/EdzYhV2pKJQ?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="swiper-slide">
+                                <iframe width="100%" src="https://www.youtube.com/embed/OpybpmgBf1g?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next video_next"></div>
+                        <div class="swiper-button-prev video_prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <p>
+                                Bạn đã đăng ký thành công !
+                            </p>
+                            <p>
+                                Chúng tôi sẽ liên hệ tư vấn MIỄN PHÍ DÙNG THỬ để tìm đúng thiết bị hội nghị truyền hình bạn cần trong thời gian sớm nhất.
+                            </p>
+                            <button type="button">Quay về Trang Chủ</button>
+                        </div>
+                        <div class="col-lg-4">
+                            <figure>
+                                <img src="./assets/images/popup_hinh.jpg" alt="" class="img-fluid">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./js/common.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+</body>
+
+</html>
