@@ -366,6 +366,21 @@ img {
     .swiper-pagination-bullet-active {
         background: #4d4d4d;
     }
+
+    .reward {
+        display: none;
+
+        p {
+            &:first-of-type {
+                font-family: $font_Bold;
+                font-size: 1.2rem;
+            }
+        }
+
+        &.active {
+            display: block;
+        }
+    }
 }
 
 #video {

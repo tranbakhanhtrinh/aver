@@ -48,10 +48,11 @@ $(function () {
         swiper1.update();
     })
     var swiper2 = new Swiper('#reward_slider', {
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
+        init: false,
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false
+        // },
         navigation: {
             nextEl: '.reward_next',
             prevEl: '.reward_prev',
@@ -64,6 +65,18 @@ $(function () {
         observer: true,
         observeParents: true,
     });
+    const arrReward = document.querySelectorAll('.reward');
+    swiper2.on('init', function () {
+        arrReward[0].classList.add('active')
+    })
+    swiper2.init();
+    swiper2.on('slideChange', function (el) {
+        [].forEach.call(arrReward, function (el) {
+            el.className = el.className.replace(/\bactive\b/, "");
+        });
+        arrReward[swiper2.activeIndex].classList.add('active');
+    })
+
     var swiper3 = new Swiper('#video_slider', {
         loop: true,
         navigation: {
@@ -76,7 +89,6 @@ $(function () {
         },
         on: {
             slideChange: function (el) {
-                console.log('1');
                 $('#video_slider .swiper-slide').each(function () {
                     var youtubePlayer = $(this).find('iframe').get(0);
                     if (youtubePlayer) {
