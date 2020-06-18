@@ -8,7 +8,7 @@ include_once("PHPMailer-master/PHPMailerAutoload.php");
 $fullname = trim($_POST['fullname']);
 $phone = trim($_POST['phone']);
 $email = trim($_POST['email']);
-$message = trim($_POST['message']);
+$company = trim($_POST['company']);
 
 
 $utm_source = isset($_COOKIE["utm_source"]) ? trim($_COOKIE["utm_source"]) :'';
@@ -28,7 +28,7 @@ if ($fullname != "" && $phone != "") {
     } 
     else {
 
-        insertregister($fullname,$phone,$email,$message,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create);
+        insertregister($fullname,$phone,$email,$company,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create);
         /*
         $mail = new PHPMailer;
         $mail->CharSet = 'UTF-8';

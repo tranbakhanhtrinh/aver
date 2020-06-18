@@ -177,7 +177,7 @@ if(!isset($_SESSION['username']))
                 <th>Họ Và tên</th>
                 <th>Số điện thoại</th>
                 <th>Email</th>
-                <th>Lời nhắn</th>
+                <th>Tên công ty</th>
                 <th>utm_source</th>
                 <!-- <th>utm_medium</th> -->
                 <!-- <th>utm_campaign</th> -->
@@ -191,7 +191,7 @@ if(!isset($_SESSION['username']))
                 <td><input type="text" placeholder="Tìm theo Họ và tên " /></td>
                 <td><input type="text" placeholder="Tìm theo Sđt " /></td>
                 <td><input type="text" placeholder="Tìm theo Email " /></td>
-                <td><input type="text" placeholder="Tìm theo Lời nhắn " /></td>
+                <td><input type="text" placeholder="Tìm theo Tên công ty " /></td>
                 <td><input type="text" placeholder="Tìm theo utm_source " /></td>
                 <!-- <td><input type="text" placeholder="Tìm theo utm_medium" /></td> -->
                 <!-- <td><input type="text" placeholder="Tìm theo utm_campaign"></td> -->
@@ -207,7 +207,7 @@ if(!isset($_SESSION['username']))
                 <td><?php echo $row['name'] ?></td>
                 <td><?php echo $row['phone'] ?></td>     
                 <td><?php echo $row['email'] ?></td>
-                <td><?php echo $row['message'] ?></td>
+                <td><?php echo $row['company'] ?></td>
                 <td><?php echo $row['utm_source'] ?></td>
                 <td><?php echo $row['date_create'] ?></td>
             </tr>

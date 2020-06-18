@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>AVer Việt Nam - Thiết bị hội nghị truyền hình chuyên nghiệp</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="icon" href="./assets/images/favicon.png" sizes="16x16" type="image/png" />
+    <script type="text/javascript">
+        function writeCookie(name, value, days) {
+            var date, expires;
+            if (days) {
+                date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var i,
+                c,
+                ca,
+                nameEQ = name + "=";
+            ca = document.cookie.split(";");
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ?
+                "" :
+                decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        var utm_campaign = getParameterByName("utm_campaign");
+        var utm_term = getParameterByName("utm_term");
+        var utm_content = getParameterByName("utm_content");
+
+        if (utm_source != "") {
+            writeCookie("utm_source", utm_source, 30);
+            writeCookie("utm_medium", utm_medium, 30);
+            writeCookie("utm_campaign", utm_campaign, 30);
+            writeCookie("utm_term", utm_term, 30);
+            writeCookie("utm_content", utm_content, 30);
+        }
+    </script>
+</head>
+
+<body>
+    <section id="thanks">
+
+        <div class="content">
+            <p>
+                Bạn đã đăng ký thành công !
+            </p>
+            <figure>
+                <img src="./assets/images/check.png" alt="" class="img-fluid d-block mx-auto">
+            </figure>
+            <p>
+                Chúng tôi sẽ liên hệ tư vấn MIỄN PHÍ DÙNG THỬ để tìm đúng thiết bị <span class="break"></span>
+                hội nghị truyền hình bạn cần trong thời gian sớm nhất.
+            </p>
+            <a href="index.html" class="field_register">Quay về Trang Chủ</a>
+        </div>
+
+    </section>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

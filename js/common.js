@@ -15,44 +15,42 @@ $(function () {
         $('html, body').animate({
             scrollTop: $('#header').offset().top - 80
         }, 600);
-    })
-    var swiper = new Swiper('#cloud_flatform', {
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false
-        },
-        navigation: {
-            nextEl: '.cloud_next',
-            prevEl: '.cloud_prev',
-        },
-        // loop: true,
-        observer: true,
-        observeParents: true,
     });
 
-    var swiper1 = new Swiper('#ip_flatform', {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() >= window.innerHeight) {
+            $(".btn_top").fadeIn();
+        }
+        else $(".btn_top").fadeOut();
+    })
+
+    $("#cloud_flatform").owlCarousel({
+        nav: true,
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        navText: ["<img src='../assets/images/arrorw_left.png' >", "<img src='../assets/images/arrorw_right.png' >"],
+        mouseDrag: true,
+        touchDrag: true
+    });
+    $("#ip_flatform").owlCarousel({
+        nav: true,
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 5000,
+        navText: ["<img src='../assets/images/arrorw_left.png' >", "<img src='../assets/images/arrorw_right.png' >"],
+        mouseDrag: true,
+        touchDrag: true
+    });
+
+    var swiper2 = new Swiper('#reward_slider', {
+        init: false,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false
         },
-        navigation: {
-            nextEl: '.ip_next',
-            prevEl: '.ip_prev',
-        },
-        // loop: true,
-        observer: true,
-        observeParents: true,
-    });
-    $("a[data-toggle='tab']").on('click', function () {
-        swiper.update();
-        swiper1.update();
-    })
-    var swiper2 = new Swiper('#reward_slider', {
-        init: false,
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false
-        // },
         navigation: {
             nextEl: '.reward_next',
             prevEl: '.reward_prev',
@@ -135,7 +133,7 @@ function kiemtra() {
         $('#phone').focus();
         return false;
     }
-    else if (!isValidEmail($('#email'))) {
+    else if (!isValidEmail($('#email').val())) {
         alert("Email bạn điền không hợp lệ !");
         $('#email').focus();
         return false;
@@ -155,8 +153,7 @@ function kiemtra() {
                     alert("Bạn đã đăng ký rồi");
                 }
                 else {
-                    // window.location.href = "thanks.html";
-                    $("#exampleModal").modal();
+                    window.location.href = "thanks.html";
                 }
             }
         });

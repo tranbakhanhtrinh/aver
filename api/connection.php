@@ -8,9 +8,9 @@ $database = "wincos";
 function DBConfig()
 {
     $servername = "localhost";
-    $username = "homestead";
-    $password = "secret";
-    $database = "wincos";
+    $username = "admin";
+    $password = "123456";
+    $database = "aver";
     return array(
         'servername' => $servername,
         'username' => $username,
@@ -91,12 +91,12 @@ $conn->query($sql);
 }
  */
 
-function insertregister($fullname,$phone,$email,$message,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create)
+function insertregister($fullname,$phone,$email,$company,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create)
 {
     try {
         $DB = dbConnectPDO();
-        $result = $DB->query("INSERT INTO registers(name,phone,email,message,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?)",
-            array($fullname,$phone,$email,$message,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create));
+        $result = $DB->query("INSERT INTO registers(name,phone,email,company,utm_source,utm_medium,utm_campaign,utm_term,utm_content,date_create) VALUES(?,?,?,?,?,?,?,?,?,?)",
+            array($fullname,$phone,$email,$company,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create));
         $DB->CloseConnection;
         if ($result) {
             return true;
