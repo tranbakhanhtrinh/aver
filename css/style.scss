@@ -77,6 +77,10 @@ img {
     margin-top: 1rem;
 }
 
+strong {
+    font-family: $font_Bold;
+}
+
 @mixin title($font-family, $text-transform, $font-size, $text-align, $color) {
     font-family: $font-family;
     text-transform: $text-transform;
@@ -428,7 +432,7 @@ footer {
 }
 
 #thanks {
-    @include background(url("../assets/images/bg_header.jpg"), no-repeat, cover, center);
+    @include background(url("../assets/images/ThankyouPage.jpg"), no-repeat, cover, center);
     height: 100vh;
     text-align: center;
     display: flex;
@@ -459,6 +463,7 @@ footer {
     a {
         text-transform: capitalize;
         margin-top: 2rem;
+        @include border-radius(5px);
 
         &:hover {
             color: #fff;

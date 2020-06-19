@@ -30,7 +30,7 @@ $(function () {
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000,
-        navText: ["<img src='../assets/images/arrorw_left.png' >", "<img src='../assets/images/arrorw_right.png' >"],
+        navText: ["<img src='./assets/images/arrorw_left.png' >", "<img src='./assets/images/arrorw_right.png' >"],
         mouseDrag: true,
         touchDrag: true
     });
@@ -40,7 +40,7 @@ $(function () {
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000,
-        navText: ["<img src='../assets/images/arrorw_left.png' >", "<img src='../assets/images/arrorw_right.png' >"],
+        navText: ["<img src='./assets/images/arrorw_left.png' >", "<img src='./assets/images/arrorw_right.png' >"],
         mouseDrag: true,
         touchDrag: true
     });
@@ -137,6 +137,10 @@ function kiemtra() {
         alert("Email bạn điền không hợp lệ !");
         $('#email').focus();
         return false;
+    }
+    else if ($('#company').val() == "") {
+        alert("Vui lòng nhập Họ tên!");
+        $('#company').focus();
     }
     else {
         const phone = $('#phone').val();
