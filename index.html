@@ -24,7 +24,7 @@
             } else {
                 expires = "";
             }
-            document.cookie = name + "=" + value + expires + "; path=/";
+            document.cookie = name + "=" + value + expires + "; path=/;SameSite=Lax; Secure";
         }
 
         function readCookie(name) {
@@ -181,7 +181,11 @@
                             <button type="button" onclick="kiemtra()" class="field_register">ĐĂNG KÝ NGAY</button>
                         </form>
                     </div>
-
+                </div>
+                <div class="col-12 d-block d-sm-block d-md-none">
+                    <figure>
+                        <img src="./assets/images/bg_header.jpg" alt="" class="img-fluid d-block">
+                    </figure>
                 </div>
             </div>
         </div>
@@ -618,7 +622,29 @@
         </div>
     </section>
 
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <figure>
+                        <img src="./assets/images/logo.png" alt="">
+                    </figure>
+                    <p>
+                        AVer Information Co., Ltd. – Việt Nam
+                    </p>
+                    <ul>
+                        <li>Tầng 5, Số 596 Nguyễn Đình Chiểu, P. 3, Q. 3, TP. HCM </li>
+                        <li>Tel: +84-028-22 539 211</li>
+                        <li>Fax: +84-028-22 539 210</li>
+                    </ul>
+                    </p>
+                    <p>
+                        Copyright © 2020 Bản quyền thuộc về AVer Information Inc., bảo lưu toàn bộ quyền sở hữu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"

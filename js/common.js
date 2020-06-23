@@ -139,7 +139,7 @@ function kiemtra() {
         return false;
     }
     else if ($('#company').val() == "") {
-        alert("Vui lòng nhập Họ tên!");
+        alert("Vui lòng nhập Tên công ty!");
         $('#company').focus();
     }
     else {

@@ -7,7 +7,7 @@ $database = "wincos";
  */
 function DBConfig()
 {
-    $servername = "localhost";
+    $servername = "112.213.89.140";
     $username = "vinst397_averlp";
     $password = "9Z()o4Mg!zbO";
     $database = "vinst397_averlp";

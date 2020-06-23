@@ -429,6 +429,25 @@ strong {
 footer {
     padding: 2rem 0;
     background: #1a1819;
+
+    figure {
+        img {
+            height: 30px !important;
+        }
+    }
+
+    p {
+        color: #909090;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+            color: #909090;
+        }
+    }
 }
 
 #thanks {
@@ -563,12 +582,18 @@ footer {
 
     #header {
         height: auto;
+        background-attachment: initial;
+        background-position: top left;
+        padding-bottom: 0;
 
         .form_header {
             width: 100%;
             margin-top: 2rem;
         }
 
+        figure {
+            margin-bottom: 0;
+        }
     }
 
     #giaiphap {
