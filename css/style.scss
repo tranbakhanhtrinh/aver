@@ -586,6 +586,17 @@ footer {
         background-position: top left;
         padding-bottom: 0;
 
+        p {
+            &.try_buy {
+                margin-bottom: 0;
+            }
+
+            &.free_trial {
+                margin-bottom: 1rem;
+            }
+        }
+
+
         .form_header {
             width: 100%;
             margin-top: 2rem;
