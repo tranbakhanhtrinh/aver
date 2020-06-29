@@ -77,6 +77,10 @@ img {
     margin-top: 1rem;
 }
 
+.mb-2rem {
+    margin-bottom: 2rem;
+}
+
 strong {
     font-family: $font_Bold;
 }
@@ -426,6 +430,40 @@ strong {
     }
 }
 
+#partner {
+    .partner {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        box-shadow: 2px 2px 7px 0px #000;
+        height: 100%;
+
+        a {
+            color: #000000;
+
+            &:hover {
+                color: #000000;
+                text-decoration: none;
+            }
+        }
+
+        figure {
+            height: 60px;
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+
+    .title {
+        text-align: center;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        font-family: $font_Bold;
+        font-size: 2rem;
+    }
+}
+
 footer {
     padding: 2rem 0;
     background: #1a1819;
@@ -645,6 +683,12 @@ footer {
         .swiper-button-prev {
             left: 0;
             z-index: 99;
+        }
+    }
+
+    #partner {
+        .title {
+            font-size: 1.3rem;
         }
     }
 
