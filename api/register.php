@@ -11,11 +11,11 @@ $email = trim($_POST['email']);
 $company = trim($_POST['company']);
 
 
-$utm_source = isset($_COOKIE["utm_source"]) ? trim($_COOKIE["utm_source"]) :'';
+$utm_source = isset($_COOKIE["utm_source"]) ? trim($_COOKIE["utm_source"]) : '';
 $utm_medium = isset($_COOKIE["utm_medium"]) ? trim($_COOKIE["utm_medium"]) : '';
-$utm_campaign = isset($_COOKIE["utm_campaign"]) ? trim($_COOKIE["utm_campaign"]) :'';
-$utm_term = isset($_COOKIE["utm_term"]) ? trim($_COOKIE["utm_term"]) :'';
-$utm_content = isset($_COOKIE["utm_content"]) ? trim($_COOKIE["utm_content"]) :'';
+$utm_campaign = isset($_COOKIE["utm_campaign"]) ? trim($_COOKIE["utm_campaign"]) : '';
+$utm_term = isset($_COOKIE["utm_term"]) ? trim($_COOKIE["utm_term"]) : '';
+$utm_content = isset($_COOKIE["utm_content"]) ? trim($_COOKIE["utm_content"]) : '';
 
 if ($fullname != "" && $phone != "") {
     date_default_timezone_set("Asia/Ho_Chi_Minh");
@@ -25,10 +25,9 @@ if ($fullname != "" && $phone != "") {
             'result' => '0'
         ));
         die();
-    } 
-    else {
+    } else {
 
-        insertregister($fullname,$phone,$email,$company,$utm_source,$utm_medium,$utm_campaign,$utm_term,$utm_content,$date_create);
+        insertregister($fullname, $phone, $email, $company, $utm_source, $utm_medium, $utm_campaign, $utm_term, $utm_content, $date_create);
         /*
         $mail = new PHPMailer;
         $mail->CharSet = 'UTF-8';
@@ -66,14 +65,10 @@ if ($fullname != "" && $phone != "") {
         */
 
         echo json_encode(array(
-            'result' => '1'                    
+            'result' => '1'
         ));
         die();
-
-
     }
 } else {
     die("404");
 }
-
-?>
