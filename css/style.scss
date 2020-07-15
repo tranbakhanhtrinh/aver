@@ -84,6 +84,10 @@ strong {
     font-family: $font_Bold;
 }
 
+iframe {
+    border: 0;
+}
+
 @mixin title($font-family, $text-transform, $font-size, $text-align, $color) {
     font-family: $font-family;
     text-transform: $text-transform;
