@@ -147,6 +147,7 @@ function kiemtra() {
         const fullname = $('#fullname').val();
         const email = $('#email').val();
         const company = $('#company').val();
+        $(".field_register").attr('disabled', 'disabled');
         $.ajax({
             type: "POST",
             url: "api/register.php",
